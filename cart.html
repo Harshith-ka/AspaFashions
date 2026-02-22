@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | AspaFashions</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+
+    <nav id="navbar" class="scrolled">
+        <a href="index.html" class="logo">ASPA FASHIONS</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+
+    <main style="padding-top: 90px; min-height: 70vh;">
+        <section class="cart-section section-compact">
+            <h1 class="reveal">Shopping Cart</h1>
+            <div id="cart-container">
+                <!-- Cart items will be injected here via JS -->
+                <div class="empty-cart-msg">Your cart is empty. <br><br> <a href="collections.html"
+                        class="btn-premium">Start Shopping</a></div>
+            </div>
+
+            <div id="cart-footer" style="display: none;">
+                <div class="cart-total">Total: <span id="cart-total-amount">₹0</span></div>
+                <div style="text-align: right; margin-top: 30px;">
+                    <a href="checkout.html" class="btn-premium">Proceed to Checkout</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 AspaFashions. Designed for Elegance.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

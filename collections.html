@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | AspaFashions</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+
+    <nav id="navbar" class="scrolled">
+        <a href="index.html" class="logo">ASPA FASHIONS</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html" class="active">Collections</a></li>
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+
+    <main style="padding-top: 90px;">
+        <section class="collections-header section-compact" style="padding-bottom: 20px;">
+            <h1 class="reveal">Our Collections</h1>
+            <p class="reveal">Explore our curated selection of fine garments.</p>
+        </section>
+
+        <section class="collections-main" style="padding: 0 10%;">
+            <div class="collections-controls reveal">
+                <div class="filters">
+                    <span style="font-weight: 600; margin-right: 10px;">Filter:</span>
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="festive">Festive</button>
+                    <button class="filter-btn" data-category="daily">Daily</button>
+                    <button class="filter-btn" data-category="bridal">Bridal</button>
+                    <button class="filter-btn" data-category="party">Party</button>
+                </div>
+                <div class="sorting">
+                    <span style="font-weight: 600; margin-right: 10px;">Sort By:</span>
+                    <select id="sort-select" class="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="name">Name (A-Z)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="collections-grid" id="products-grid">
+                <!-- Products will be injected here via index.js -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 AspaFashions. Designed for Elegance.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

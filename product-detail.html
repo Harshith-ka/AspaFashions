@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | AspaFashions</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+
+<body>
+
+    <nav id="navbar" class="scrolled">
+        <a href="index.html" class="logo">ASPA FASHIONS</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+
+    <main style="padding-top: 90px;">
+        <section class="product-detail-section section-compact">
+            <div class="product-detail-container">
+                <div class="product-detail-image">
+                    <img id="product-img"
+                        src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1974&auto=format&fit=crop"
+                        alt="Product Image">
+                </div>
+                <div class="product-detail-info">
+                    <h1 id="product-name" class="reveal">Silk Grace Saree</h1>
+                    <p class="product-category" id="product-category-label">Classic Collection</p>
+                    <p class="product-price">₹4,999</p>
+                    <div class="product-description">
+                        <p>Beautifully crafted Silk Grace Saree with intricate gold embroidery. Perfect for special
+                            occasions and festive celebrations. Designed to provide both comfort and a regal look.</p>
+                    </div>
+
+                    <div class="product-actions" style="margin-top: 40px;">
+                        <button class="btn-premium" id="add-to-cart">Add to Cart</button>
+                        <a href="collections.html" class="btn-secondary" style="margin-left: 15px;">Back to Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products Section -->
+        <section class="featured-products section-compact" style="background-color: transparent; padding-top: 60px;">
+            <h2 class="reveal" style="font-size: 32px; margin-bottom: 40px;">You May Also Like</h2>
+            <div class="horizontal-scroll reveal" id="related-products-container">
+                <!-- Related products injected via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 AspaFashions. Designed for Elegance.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

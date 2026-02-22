@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | AspaFashions</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        .checkout-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .checkout-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .checkout-form div {
+            margin-bottom: 20px;
+        }
+
+        .checkout-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .checkout-form input,
+        .checkout-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            font-family: var(--font-body);
+        }
+
+        .order-summary {
+            background: #fdfdfd;
+            padding: 30px;
+            border: 1px solid #eee;
+        }
+
+        .order-summary h3 {
+            margin-bottom: 20px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="navbar" class="scrolled">
+        <a href="index.html" class="logo">ASPA FASHIONS</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="collections.html">Collections</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+
+    <main style="padding-top: 120px;">
+        <section class="checkout-section">
+            <h1 class="reveal">Checkout</h1>
+            <div class="checkout-container">
+                <div class="checkout-form reveal">
+                    <h3>Delivery Details</h3>
+                    <form id="order-form">
+                        <div>
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required placeholder="Jane Doe">
+                        </div>
+                        <div>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="+91 00000 00000">
+                        </div>
+                        <div>
+                            <label for="address">Shipping Address</label>
+                            <textarea id="address" rows="4" required
+                                placeholder="Apartment, Street, Landmark..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-premium" style="width: 100%;">Complete Order on
+                            WhatsApp</button>
+                    </form>
+                </div>
+
+                <div class="order-summary reveal">
+                    <h3>Order Summary</h3>
+                    <div id="summary-items">
+                        <!-- Items injected by JS -->
+                    </div>
+                    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+                    <div class="summary-item" style="font-size: 18px; font-weight: 700;">
+                        <span>Total Payable</span>
+                        <span id="summary-total">₹0</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="premium-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 AspaFashions. Designed for Elegance.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/products.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script>
+        document.getElementById('order-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Logic to handle order and redirect to WhatsApp will be in index.js or here
+            finalizeOrder();
+        });
+    </script>
+</body>
+
+</html>
